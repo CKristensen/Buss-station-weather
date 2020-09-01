@@ -18,9 +18,9 @@ def get_weather_on_station(sourceId):
     """    
     endpoint = 'https://frost.met.no/observations/v0.jsonld'
     parameters = {
-        'sources': f'{sourceId},', #disen
+        'sources': f'{sourceId},', 
         'elements': 'air_temperature,',
-        'referencetime': '2019-04-01/2019-05-01',
+        'referencetime': '2020-01-01/2020-09-01',
     }
     # Issue an HTTP GET request
     r = requests.get(endpoint, parameters, auth=(CLIENT_ID,''))
