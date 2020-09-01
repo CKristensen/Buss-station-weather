@@ -36,9 +36,9 @@ def get_weather_station_latlon():
     for row in data:
         df.loc[len(df)] = [row['id'], row['name'], row["geometry"]]
 
+    #extract the latitude and longitude from the geometry column
     lat = lambda x: re.findall(r'(\d+\.\d+)', str(x))[0]
     lon = lambda x: re.findall(r'(\d+\.\d+)', str(x))[1]
-
     df['lat'] = df['geometry'].apply(lat)
     df['lon']= df['geometry'].apply(lon)
 
