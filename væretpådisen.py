@@ -9,10 +9,8 @@ CLIENT_ID = os.environ['FROST_API_CLIENT_ID']
 
 def get_weather_on_station(sourceId):
     """Get the weather on a particular station for the month of April
-
     Args:
         sourceId (str): sourceId for a weather station in FrostAPI
-
     Returns:
         Pandas Dataframe: columns = sourceID, referenceTime, elementId, value, unit
     """    

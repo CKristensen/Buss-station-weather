@@ -30,14 +30,16 @@ def get_en_tur_data():
         with myzip.open('stop_times.txt') as myfile4:
             stop_times = pd.read_csv(myfile4)
 
-    stops = stops[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']]
-    routes = routes[['route_id', 'route_short_name', 'route_long_name', 'route_type']]
+    # stops = stops[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']]
+    # routes = routes[['route_id', 'route_short_name', 'route_long_name', 'route_type']]
     trips = trips[['trip_id', 'route_id']]
-    stop_times = stop_times[['trip_id', 'stop_id']]
+    # stop_times = stop_times[['trip_id', 'stop_id']]
 
-    df_ = pd.merge(stop_times, trips, on='trip_id', how='inner')
-    df_ = df_.drop_duplicates()
+    # df_ = pd.merge(stop_times, trips, on='trip_id', how='inner')
+    # df_ = df_.drop_duplicates()
 
-    return (df_[['route_id', 'stop_id']])
+    # return (df_[['route_id', 'stop_id']])
+    return  trips
+
 
 print(get_en_tur_data())

@@ -45,3 +45,7 @@ def get_weather_station_latlon():
     return df[['id', 'name', 'lat', 'lon']]
 
 print(get_weather_station_latlon())
+
+
+def score_weather(vind, temperatur, precipitation):
+    return temperatur - precipitation - vind
