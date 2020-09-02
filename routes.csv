@@ -1,0 +1,427 @@
+,route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+0,RUT:Line:110,RUT:Authority:RUT,110,Lillestrøm - Oslo bussterminal,,704,,e60000,ffffff
+1,RUT:Line:100,RUT:Authority:RUT,100,Kjeller - Oslo bussterminal,,704,,e60000,ffffff
+2,RUT:Line:1331,RUT:Authority:RUT,1331,Siggerud skole,,712,,76a300,ffffff
+3,RUT:Line:130,RUT:Authority:RUT,130,Sandvika -Skøyen,,704,,e60000,ffffff
+4,RUT:Line:12,RUT:Authority:RUT,12,Aker brygge - Kjelsås,,902,,0b91ef,ffffff
+5,RUT:Line:1215,RUT:Authority:RUT,215A,Kolsås - Vøyenenga- Sandvika,,704,,76a300,ffffff
+6,RUT:Line:120,RUT:Authority:RUT,120,Nesåsen - Grorud,,704,,76a300,ffffff
+7,RUT:Line:11,RUT:Authority:RUT,11,Welhavens gate - Kjelsås,,902,,0b91ef,ffffff
+8,RUT:Line:1171,RUT:Authority:RUT,1171,Dyrløkke - Vestby vgs,,712,,76a300,ffffff
+9,RUT:Line:1132,RUT:Authority:RUT,1132,Hølen - Garder - Vestby stasjon,,712,,76a300,ffffff
+10,RUT:Line:1436,RUT:Authority:RUT,1436,TusenFryd - Nordby skole,,712,,76a300,ffffff
+11,RUT:Line:1435,RUT:Authority:RUT,1435,Rustad skole - Dyster/Eldor,,712,,76a300,ffffff
+12,RUT:Line:1434,RUT:Authority:RUT,1434,Vestbygda - Brønnerud skole / Ås ungdomsskole,,712,,76a300,ffffff
+13,RUT:Line:1432,RUT:Authority:RUT,1432,Kongeveien - Nordby skole,,712,,76a300,ffffff
+14,RUT:Line:1431,RUT:Authority:RUT,1431,Kjærnes - Nordby skole,,712,,76a300,ffffff
+15,RUT:Line:140,RUT:Authority:RUT,140,Bekkestua - Østerås - Skøyen,,704,,e60000,ffffff
+16,RUT:Line:13,RUT:Authority:RUT,13,Bekkestua - Bjørvika,,902,,0b91ef,ffffff
+17,RUT:Line:1333,RUT:Authority:RUT,1333,Skotbu - Bjastad - Kråkstad skole,,712,,76a300,ffffff
+18,RUT:Line:1632,RUT:Authority:RUT,1632,Blylaget - Alværn ungdomsskole,,712,,76a300,ffffff
+19,RUT:Line:1631,RUT:Authority:RUT,1631,Fjellstrand - Alværn ungdomsskole,,712,,76a300,ffffff
+20,RUT:Line:160,RUT:Authority:RUT,160,Rykkinn -Oslo bussterminal,,704,,76a300,ffffff
+21,RUT:Line:1572,RUT:Authority:RUT,1572,Ski - Frogn videregående skole,,712,,76a300,ffffff
+22,RUT:Line:1571,RUT:Authority:RUT,1571,Ski - Frogn videregående skole,,712,,76a300,ffffff
+23,RUT:Line:1533,RUT:Authority:RUT,1533,Tomter - Klommestein - Heer,,712,,76a300,ffffff
+24,RUT:Line:150,RUT:Authority:RUT,150,Gullhaug - Oslo bussterminal,,704,,76a300,ffffff
+25,RUT:Line:145,RUT:Authority:RUT,145,Bekkestua - Fornebu,,704,,e60000,ffffff
+26,RUT:Line:201,RUT:Authority:RUT,201,Sandvika - Jong,,704,,76a300,ffffff
+27,RUT:Line:2018,RUT:Authority:RUT,2018,Undelstad - Torstad,,712,,76a300,ffffff
+28,RUT:Line:2015,RUT:Authority:RUT,2015,Nesøya - Landøya,,712,,76a300,ffffff
+29,RUT:Line:1,RUT:Authority:RUT,1,Frognerseteren - Bergkrystallen,,401,,ec700c,ffffff
+30,RUT:Line:19,RUT:Authority:RUT,19,Nationaltheatret - Ljabru,,902,,0b91ef,ffffff
+31,RUT:Line:18,RUT:Authority:RUT,18,Rikshospitalet - Ljabru,,902,,0b91ef,ffffff
+32,RUT:Line:17,RUT:Authority:RUT,17,Rikshospitalet - Disen,,902,,0b91ef,ffffff
+33,RUT:Line:1672,RUT:Authority:RUT,1672,Fagerstrand - Fjellstrand - Nesodden vgs.,,712,,76a300,ffffff
+34,RUT:Line:2043,RUT:Authority:RUT,2043,Åsheimterminalen - Rødtangen-Folkestad sk -Tofte,,712,,76a300,ffffff
+35,RUT:Line:2042,RUT:Authority:RUT,2042,Folkestad sk -Kana -Verket- Åsheim -Steinerskolen,,712,,76a300,ffffff
+36,RUT:Line:2041,RUT:Authority:RUT,2041,Folkestad sk- Holmsbu -Rødtangen -Verket,,712,,76a300,ffffff
+37,RUT:Line:203,RUT:Authority:RUT,203,Skui - Sandvika,,704,,76a300,ffffff
+38,RUT:Line:2033,RUT:Authority:RUT,2033,Grimsrud -Spikkestad ungdomsskole,,712,,76a300,ffffff
+39,RUT:Line:2032,RUT:Authority:RUT,2032,Kleiverfeltet - Midtbygda skole,,712,,76a300,ffffff
+40,RUT:Line:2031,RUT:Authority:RUT,31E,Fornebu - Kalbakken,,702,,e60000,ffffff
+41,RUT:Line:202,RUT:Authority:RUT,202,Tanum kirke - Henie Onstad seniorsenter - Sandvika,,704,,76a300,ffffff
+42,RUT:Line:2064,RUT:Authority:RUT,64B,Furuset T - Stovner T via Haugenstua,,704,,e60000,ffffff
+43,RUT:Line:2061,RUT:Authority:RUT,61B,Tveita T - Bøler T,,704,,e60000,ffffff
+44,RUT:Line:205,RUT:Authority:RUT,205,Sandvika - Gjettum,,704,,76a300,ffffff
+45,RUT:Line:2056,RUT:Authority:RUT,56B,Nydalen - Grefsenkollen,,704,,e60000,ffffff
+46,RUT:Line:204,RUT:Authority:RUT,204,Rykkinn - Kolsås - Sandvika,,704,,76a300,ffffff
+47,RUT:Line:2047,RUT:Authority:RUT,2047,Verket - Mølleveien -Folkestad skole -Sætre,,712,,76a300,ffffff
+48,RUT:Line:2045,RUT:Authority:RUT,2045,Sætre - Tofte skole,,712,,76a300,ffffff
+49,RUT:Line:2044,RUT:Authority:RUT,2044,Steinerskolen Hurum - Storsand sentrum - Sagene,,712,,76a300,ffffff
+50,RUT:Line:20,RUT:Authority:RUT,20,Skøyen - Galgeberg,,704,,e60000,ffffff
+51,RUT:Line:2079,RUT:Authority:RUT,2079,Sundbykrysset -Morbergtoppen - Røyken vgs.,,712,,76a300,ffffff
+52,RUT:Line:2073,RUT:Authority:RUT,2073,Åsheim bussterminal - Tofte -Røyken vgs.,,712,,76a300,ffffff
+53,RUT:Line:2078,RUT:Authority:RUT,78B,Østensjø ring,,704,,e60000,ffffff
+54,RUT:Line:2072,RUT:Authority:RUT,2072,Grimsrud - Røyken vgs.,,712,,76a300,ffffff
+55,RUT:Line:2081,RUT:Authority:RUT,2081,Sundbykrysset -Slemmestad - Åssiden vgs.,,712,,76a300,ffffff
+56,RUT:Line:2071,RUT:Authority:RUT,71B,Mortensrud T - Seterbråten,,704,,e60000,ffffff
+57,RUT:Line:2069,RUT:Authority:RUT,69B,Tveita ring,,704,,e60000,ffffff
+58,RUT:Line:211,RUT:Authority:RUT,211,Bekkestua - Sandvika storsenter,,704,,76a300,ffffff
+59,RUT:Line:210,RUT:Authority:RUT,210,Bykrysset - Slalåmveien - Sandvika,,704,,76a300,ffffff
+60,RUT:Line:2082,RUT:Authority:RUT,2082,St.Hallvard -Åsheim bussterminal - Filtvet,,712,,76a300,ffffff
+61,RUT:Line:2076,RUT:Authority:RUT,2076,Dalbø - Sydskogen- Røyken vgs,,712,,76a300,ffffff
+62,RUT:Line:2075,RUT:Authority:RUT,75B,Nordstrand ring,,704,,e60000,ffffff
+63,RUT:Line:2085,RUT:Authority:RUT,85B,Ormsundet - Malmøya,,704,,e60000,ffffff
+64,RUT:Line:2077,RUT:Authority:RUT,77B,Holmlia stasjon - Asperudåsen,,704,,e60000,ffffff
+65,RUT:Line:2074,RUT:Authority:RUT,2074,Verpen - Røyken vgs.,,712,,76a300,ffffff
+66,RUT:Line:2138,RUT:Authority:RUT,2138,Rømskog - Setskog - Bjørkelangen,,712,,76a300,ffffff
+67,RUT:Line:2137,RUT:Authority:RUT,2137,Harkerud - Lomsnes - Aursmoen skole - Bjørkelangen,,712,,76a300,ffffff
+68,RUT:Line:2135,RUT:Authority:RUT,2135,Søndre Mangen - Haneborg skole,,712,,76a300,ffffff
+69,RUT:Line:2134,RUT:Authority:RUT,2134,Ulviken - Aursmoen skole - Haneborg skole,,712,,76a300,ffffff
+70,RUT:Line:2133,RUT:Authority:RUT,2133,Aursmoen skole - Finstadbru - Korsmo,,712,,76a300,ffffff
+71,RUT:Line:2132,RUT:Authority:RUT,2132,Aursmoen skole - Ulviken - Haneborg skole,,712,,76a300,ffffff
+72,RUT:Line:2131,RUT:Authority:RUT,2131,Finstadbru - Haneborg skole - Aursmoen skole,,712,,76a300,ffffff
+73,RUT:Line:212,RUT:Authority:RUT,212,Bekkestua - Østerås,,704,,76a300,ffffff
+74,RUT:Line:2145,RUT:Authority:RUT,2145,Halvorsrud - Bjørnebråten - Løken - Bråte skole,,712,,76a300,ffffff
+75,RUT:Line:2144,RUT:Authority:RUT,2144,Løken - Nærby - Furulund - Bråte skole,,712,,76a300,ffffff
+76,RUT:Line:2143,RUT:Authority:RUT,2143,Brangerud - Løken - Momoen - Ovrum - Bråte,,712,,76a300,ffffff
+77,RUT:Line:2142,RUT:Authority:RUT,2142,Smedsrud - Nærby - Nes - Løken,,712,,76a300,ffffff
+78,RUT:Line:2141,RUT:Authority:RUT,2141,Løken - Momoen - Løken - Nærby - Garsvik,,712,,76a300,ffffff
+79,RUT:Line:2140,RUT:Authority:RUT,2140,Bjørkelangen - Liermosen - Mokroken,,712,,76a300,ffffff
+80,RUT:Line:213,RUT:Authority:RUT,213,Bekkestua - Høvik - Sandvika,,704,,76a300,ffffff
+81,RUT:Line:2139,RUT:Authority:RUT,2139,Bjørkelangen - Smedsrud - Rud - Bjørkelangen,,712,,76a300,ffffff
+82,RUT:Line:216,RUT:Authority:RUT,216,Bekkestua - Søråsen - Kleivveien,,704,,76a300,ffffff
+83,RUT:Line:2160,RUT:Authority:RUT,160E,Rykkinn - Nationaltheatret,,702,,76a300,ffffff
+84,RUT:Line:2151,RUT:Authority:RUT,2151,Skjeggenes - Fossum - Setskog skole,,712,,76a300,ffffff
+85,RUT:Line:2150,RUT:Authority:RUT,2150,Sollum - Grorud - Fylkesdele - Bråte skole,,712,,76a300,ffffff
+86,RUT:Line:214,RUT:Authority:RUT,214,Bekkestua - Lysaker - Ekern - Jernbaneveien,,704,,76a300,ffffff
+87,RUT:Line:2148,RUT:Authority:RUT,2148,Studsrud - Pavestad - Bråte skole,,712,,76a300,ffffff
+88,RUT:Line:2147,RUT:Authority:RUT,2147,Bråte skole - Hellesjø - Nes - Øsken - Grasåsen,,712,,76a300,ffffff
+89,RUT:Line:2146,RUT:Authority:RUT,2146,Bråte skole - Sjøberg - Løken - Bjørkelangen,,712,,76a300,ffffff
+90,RUT:Line:217,RUT:Authority:RUT,217,Lommedalen seniorsenter,,704,,76a300,ffffff
+91,RUT:Line:2177,RUT:Authority:RUT,2177,Sørumsand - Bjørkelangen,,712,,76a300,ffffff
+92,RUT:Line:2176,RUT:Authority:RUT,2176,Kjelle skole - Killingmo,,712,,76a300,ffffff
+93,RUT:Line:2175,RUT:Authority:RUT,2175,Bjørkelangen - Løken - Fjellsrud - Krokedal,,712,,76a300,ffffff
+94,RUT:Line:2174,RUT:Authority:RUT,2174,Studsrud - Bråte skole - Løken - Bjørkelangen,,712,,76a300,ffffff
+95,RUT:Line:2173,RUT:Authority:RUT,2173,Lørenfallet - Sørumsand - Hellne - Bjørkelangen,,712,,76a300,ffffff
+96,RUT:Line:2172,RUT:Authority:RUT,2172,Basmo - Bråte - Løken - Fosser - Bjørkelangen,,712,,76a300,ffffff
+97,RUT:Line:2171,RUT:Authority:RUT,2171,Garderåsen - Bjørkelangen,,712,,76a300,ffffff
+98,RUT:Line:230,RUT:Authority:RUT,230,Sandvika - Bekkestua - Østerås - Ila,,704,,76a300,ffffff
+99,RUT:Line:2300,RUT:Authority:RUT,300E,Ekspress Blystadlia - Helsfyr,,704,,e60000,ffffff
+100,RUT:Line:2265,RUT:Authority:RUT,265E,Nesøya - Oslo bussterminal,,702,,76a300,ffffff
+101,RUT:Line:2255,RUT:Authority:RUT,255E,Sætre - Slemmestad - Oslo bussterminal,,702,,76a300,ffffff
+102,RUT:Line:2250,RUT:Authority:RUT,250E,Slemmestad - Oslo bussterminal,,702,,76a300,ffffff
+103,RUT:Line:2215,RUT:Authority:RUT,215B,Kolsås - Sandvika,,704,,76a300,ffffff
+104,RUT:Line:220,RUT:Authority:RUT,220,Sandvika - Bekkestua,,704,,76a300,ffffff
+105,RUT:Line:21,RUT:Authority:RUT,21,Tjuvholmen - Helsfyr T,,704,,e60000,ffffff
+106,RUT:Line:261,RUT:Authority:RUT,261,Drammen - Lahell - Røyken - Sætre,,704,,76a300,ffffff
+107,RUT:Line:2490,RUT:Authority:RUT,490E,Trøgstad - Oslo bussterminal ekspress,,702,,76a300,ffffff
+108,RUT:Line:240,RUT:Authority:RUT,240,Skui - Sandvika,,704,,76a300,ffffff
+109,RUT:Line:2400,RUT:Authority:RUT,400E,Eltonåsen - Oslo Ekspress,,702,,76a300,ffffff
+110,RUT:Line:23,RUT:Authority:RUT,23,Lysaker - Simensbråten,,704,,e60000,ffffff
+111,RUT:Line:2390,RUT:Authority:RUT,390E,Hellerudhaugen - Oslo bussterminal,,702,,76a300,ffffff
+112,RUT:Line:2370,RUT:Authority:RUT,370B,Sørumsand - Blaker - Sørumsand,,704,,76a300,ffffff
+113,RUT:Line:235,RUT:Authority:RUT,235,Østerås - Grini Næringspark - Listuveien,,704,,76a300,ffffff
+114,RUT:Line:2635,RUT:Authority:RUT,2635,Haugtun skole - Rånåsfoss - Hellne - Sørumsand,,712,,76a300,ffffff
+115,RUT:Line:25,RUT:Authority:RUT,25,Majorstuen - Lørenskog stasjon,,704,,e60000,ffffff
+116,RUT:Line:2470,RUT:Authority:RUT,470E,Eidslia - Oslo bussterminal ekspress,,702,,76a300,ffffff
+117,RUT:Line:2634,RUT:Authority:RUT,2634,Skugstad - Mork - Hellne - Fjuk skole - Sørumsand,,712,,76a300,ffffff
+118,RUT:Line:2540,RUT:Authority:RUT,540N,Oslo - Ski - Ås - Vestby,,705,,76a300,ffffff
+119,RUT:Line:250,RUT:Authority:RUT,250,Sætre - Slemmestad - Oslo bussterminal,,704,,76a300,ffffff
+120,RUT:Line:245,RUT:Authority:RUT,245,Kattås - Tanum - Sandvika,,704,,76a300,ffffff
+121,RUT:Line:2642,RUT:Authority:RUT,2642,Vardefjellet - Frogner skole - Sørumsand,,712,,76a300,ffffff
+122,RUT:Line:2640,RUT:Authority:RUT,2640,Knatten - Arteid - Frogner - Vesterskaun skole,,712,,76a300,ffffff
+123,RUT:Line:2632,RUT:Authority:RUT,2632,Fjuk sk. - Harkerud - Staurhaugen - Haugtun sk.,,712,,76a300,ffffff
+124,RUT:Line:24,RUT:Authority:RUT,24,Fornebu vest - Brynseng T,,704,,e60000,ffffff
+125,RUT:Line:2638,RUT:Authority:RUT,2638,Vardefjellet - Frogner skole - minianbud,,712,,76a300,ffffff
+126,RUT:Line:256,RUT:Authority:RUT,256,Verket - Åsheim - Holmsbu - Tofte - Sætre,,704,,76a300,ffffff
+127,RUT:Line:2529,RUT:Authority:RUT,529A,Hebekk - Ski stasjon vest,,704,,e60000,ffffff
+128,RUT:Line:2480,RUT:Authority:RUT,480E,Bjørkelangen - Løken - Oslo bussterminal ekspress,,702,,76a300,ffffff
+129,RUT:Line:2671,RUT:Authority:RUT,2671,Sundet - Sørumsand,,712,,76a300,ffffff
+130,RUT:Line:2521,RUT:Authority:RUT,521X,TusenFryd - Ski stasjon,,704,,76a300,ffffff
+131,RUT:Line:265,RUT:Authority:RUT,265,Sandvika - Nesøya - Sandvika,,704,,76a300,ffffff
+132,RUT:Line:2631,RUT:Authority:RUT,2631,Lørenfallet - Simarud - Veslesjea - Sørumsand,,712,,76a300,ffffff
+133,RUT:Line:251,RUT:Authority:RUT,251,Drammen - Hyggen - Åsheim - Sætre,,704,,76a300,ffffff
+134,RUT:Line:2673,RUT:Authority:RUT,2673,Bjørkelangen - Sørumsand,,712,,76a300,ffffff
+135,RUT:Line:2633,RUT:Authority:RUT,2633,Simarud - Rånåsfoss - Haugtun skole - Sørumsand,,712,,76a300,ffffff
+136,RUT:Line:260,RUT:Authority:RUT,260,Hyggen - Bråset -Slemmestad (- Asker),,704,,76a300,ffffff
+137,RUT:Line:2505,RUT:Authority:RUT,505E,Skorkeberg - Oslo,,702,,76a300,ffffff
+138,RUT:Line:2733,RUT:Authority:RUT,2733,Stigen - Stensrud - Dalen skole - Sundet,,712,,76a300,ffffff
+139,RUT:Line:2732,RUT:Authority:RUT,2732,Dammerud - Tofsrud - Lystad - Riddersand skole,,712,,76a300,ffffff
+140,RUT:Line:2731,RUT:Authority:RUT,2731,Vinsnes - Jølsen - Garderåsen - Sundet,,712,,76a300,ffffff
+141,RUT:Line:2639,RUT:Authority:RUT,2639,Vardefjellet - Frogner skole,,712,,76a300,ffffff
+142,RUT:Line:2560,RUT:Authority:RUT,560N,Blylaget - Hellvik - Nesoddtangen,,704,,76a300,ffffff
+143,RUT:Line:270,RUT:Authority:RUT,270,Asker - Sandvika (- Fornebu),,704,,76a300,ffffff
+144,RUT:Line:2636,RUT:Authority:RUT,2636,Haugtun skole - Kvevli - Mork,,712,,76a300,ffffff
+145,RUT:Line:2565,RUT:Authority:RUT,565E,Hellvik - Nesoddtangen,,704,,76a300,ffffff
+146,RUT:Line:2871,RUT:Authority:RUT,2871,Ask - Lillestrøm - Rælingen vgs.,,712,,76a300,ffffff
+147,RUT:Line:285,RUT:Authority:RUT,285,Rustadgrenda -Heggedal - Blakstad - Asker,,704,,76a300,ffffff
+148,RUT:Line:2850,RUT:Authority:RUT,150E,Gullhaug - Nationaltheatret,,702,,76a300,ffffff
+149,RUT:Line:2840,RUT:Authority:RUT,140E,Hosle - Nationaltheatret,,702,,76a300,ffffff
+150,RUT:Line:281,RUT:Authority:RUT,281,Borgen - Asker,,704,,76a300,ffffff
+151,RUT:Line:280,RUT:Authority:RUT,280,Asker - Dikemark - Heggedal,,704,,76a300,ffffff
+152,RUT:Line:275,RUT:Authority:RUT,275,Asker - Vøyen,,704,,76a300,ffffff
+153,RUT:Line:2734,RUT:Authority:RUT,2734,Krokedal - Sand - Dalen skole - Sundet,,712,,76a300,ffffff
+154,RUT:Line:2933,RUT:Authority:RUT,2933,Ytre Enebakk skole,,712,,76a300,ffffff
+155,RUT:Line:2932,RUT:Authority:RUT,2932,Ekebergdalen - Enebakk kirke,,712,,76a300,ffffff
+156,RUT:Line:2931,RUT:Authority:RUT,2931,Dalefjerdingen,,712,,76a300,ffffff
+157,RUT:Line:292,RUT:Authority:RUT,292,Asker - Bondi - Blakstad - Bleikerkollen,,704,,76a300,ffffff
+158,RUT:Line:291,RUT:Authority:RUT,291,Asker - Ånnerud - Vardåsen - Drengsrud,,704,,76a300,ffffff
+159,RUT:Line:290,RUT:Authority:RUT,290,Asker - Blakstad,,704,,76a300,ffffff
+160,RUT:Line:28,RUT:Authority:RUT,28,Fornebu vest - Økern T,,704,,e60000,ffffff
+161,RUT:Line:2873,RUT:Authority:RUT,2873,Røykås - Lørenskog sentrum - Strømmen - Rælingen,,712,,76a300,ffffff
+162,RUT:Line:2,RUT:Authority:RUT,2,Østerås - Ellingsrudåsen,,401,,ec700c,ffffff
+163,RUT:Line:298,RUT:Authority:RUT,298,Konglungen - Vettre,,704,,76a300,ffffff
+164,RUT:Line:297,RUT:Authority:RUT,297,Asker - Solgården - Høn - Undelstad,,704,,76a300,ffffff
+165,RUT:Line:2977,RUT:Authority:RUT,77C,Holmlia stasjon - Krummedike,,704,,e60000,ffffff
+166,RUT:Line:296,RUT:Authority:RUT,296,Asker - Heggedal - Torp - Rortunet,,704,,76a300,ffffff
+167,RUT:Line:295,RUT:Authority:RUT,295,Guibekken - Vollen,,704,,76a300,ffffff
+168,RUT:Line:294,RUT:Authority:RUT,294,Asker - Borgen - Bondivann stasjon,,704,,76a300,ffffff
+169,RUT:Line:293,RUT:Authority:RUT,293,Asker - Leangkollen - Konglungen,,704,,76a300,ffffff
+170,RUT:Line:3071,RUT:Authority:RUT,3071,Enebakk - Lørenskog,,712,,76a300,ffffff
+171,RUT:Line:3019,RUT:Authority:RUT,19B,Buss for linje 19,,704,,e60000,ffffff
+172,RUT:Line:3012,RUT:Authority:RUT,12B,Buss for linje 12,,704,,e60000,ffffff
+173,RUT:Line:3011,RUT:Authority:RUT,11B,Buss for linje 11,,704,,e60000,ffffff
+174,RUT:Line:300,RUT:Authority:RUT,300,Blystadlia - Ahus - Oslo bussterminal,,704,,e60000,ffffff
+175,RUT:Line:3007,RUT:Authority:RUT,1C,Buss for linje 1,,704,,e60000,ffffff
+176,RUT:Line:3002,RUT:Authority:RUT,2B,Buss for linje 2,,704,,e60000,ffffff
+177,RUT:Line:3001,RUT:Authority:RUT,1B,Buss for linje 1,,704,,e60000,ffffff
+178,RUT:Line:310,RUT:Authority:RUT,310,Fjerdingby - Vallerudtoppen,,704,,76a300,ffffff
+179,RUT:Line:30,RUT:Authority:RUT,30,Bygdøy - Nydalen,,704,,e60000,ffffff
+180,RUT:Line:3081,RUT:Authority:RUT,81X,Buss for tog Oslo S - Kolbotn,,704,,e60000,ffffff
+181,RUT:Line:3080,RUT:Authority:RUT,80X,Buss for tog Tollboden - Holmlia,,704,,e60000,ffffff
+182,RUT:Line:3077,RUT:Authority:RUT,77X,Hauketo stasjon - Bjørndal,,704,,e60000,ffffff
+183,RUT:Line:3075,RUT:Authority:RUT,75C,Lambertseter ring,,704,,e60000,ffffff
+184,RUT:Line:3073,RUT:Authority:RUT,3073,Vallerudtoppen - Skåreråsen - Ahus - Knatten,,712,,76a300,ffffff
+185,RUT:Line:3072,RUT:Authority:RUT,72C,Mortensrud T - Maikollen,,704,,e60000,ffffff
+186,RUT:Line:335,RUT:Authority:RUT,335,Lillestrøm - Branderud,,704,,76a300,ffffff
+187,RUT:Line:3140,RUT:Authority:RUT,140N,Oslo bussterminal - Bekkestua,,705,,e60000,ffffff
+188,RUT:Line:3132,RUT:Authority:RUT,3132,Solberg - Åsenhagen skole,,712,,76a300,ffffff
+189,RUT:Line:3131,RUT:Authority:RUT,3131,Vardeåsen - Tærudhallen,,712,,76a300,ffffff
+190,RUT:Line:3130,RUT:Authority:RUT,130N,Oslo bussterminal - Sandvika,,705,,e60000,ffffff
+191,RUT:Line:3125,RUT:Authority:RUT,125E,Nesåsen - Helsfyr,,702,,76a300,ffffff
+192,RUT:Line:3115,RUT:Authority:RUT,115E,Vallerudtoppen - Helsfyr,,702,,76a300,ffffff
+193,RUT:Line:3110,RUT:Authority:RUT,110E,Sørlihavna - Helsfyr,,702,,76a300,ffffff
+194,RUT:Line:32,RUT:Authority:RUT,32,Voksen skog - Kværnerbyen,,704,,e60000,ffffff
+195,RUT:Line:321,RUT:Authority:RUT,321,Fetsund - Garderåsen,,704,,76a300,ffffff
+196,RUT:Line:3172,RUT:Authority:RUT,3172,Hakadal - Gjelleråstoppen - Skjetten - Lillestrøm,,712,,76a300,ffffff
+197,RUT:Line:3372,RUT:Authority:RUT,3372,Hellerudhaugen - Bjertnes vgs,,712,,76a300,ffffff
+198,RUT:Line:316,RUT:Authority:RUT,316,Øvre Grønlia - Hanaborg - Lørenskog sentrum,,704,,76a300,ffffff
+199,RUT:Line:3331,RUT:Authority:RUT,3331,Kongskog - Rotnes - Holum skog - Li skole,,712,,76a300,ffffff
+200,RUT:Line:31,RUT:Authority:RUT,31,Snarøya - Grorud,,704,,e60000,ffffff
+201,RUT:Line:315,RUT:Authority:RUT,315,Vallerudtoppen - Ahus,,704,,76a300,ffffff
+202,RUT:Line:3333,RUT:Authority:RUT,3333,Åneby stasjon - Kirkeby skole,,712,,76a300,ffffff
+203,RUT:Line:326,RUT:Authority:RUT,326,Fet,,704,,76a300,ffffff
+204,RUT:Line:320,RUT:Authority:RUT,320,Garderåsen - Lillestrøm,,704,,76a300,ffffff
+205,RUT:Line:3374,RUT:Authority:RUT,3374,Skedsmokorset - Solberg - Bjertnes vgs,,712,,76a300,ffffff
+206,RUT:Line:330,RUT:Authority:RUT,330,Fjerdingby - Lillestrøm,,704,,76a300,ffffff
+207,RUT:Line:3240,RUT:Authority:RUT,240N,Sandvika - Tanum - Skui,,705,,76a300,ffffff
+208,RUT:Line:3175,RUT:Authority:RUT,3175,Lørenfallet - Arteid - Lillestrøm,,712,,76a300,ffffff
+209,RUT:Line:3334,RUT:Authority:RUT,3334,Åneby - Kongskog,,712,,76a300,ffffff
+210,RUT:Line:3431,RUT:Authority:RUT,3431,Nitteberg - Kankedalen - Ask,,712,,76a300,ffffff
+211,RUT:Line:341,RUT:Authority:RUT,341,Skedsmokorset - Tæruddalen,,704,,76a300,ffffff
+212,RUT:Line:340,RUT:Authority:RUT,340,Skedsmokorset - Olavsgaard - Lillestrøm,,704,,76a300,ffffff
+213,RUT:Line:3373,RUT:Authority:RUT,3373,Skillebekk - Bjertnes vgs,,712,,76a300,ffffff
+214,RUT:Line:3371,RUT:Authority:RUT,3371,Lillestrøm - Skjetten - Holum skog - Bjertnes vgs.,,712,,76a300,ffffff
+215,RUT:Line:33,RUT:Authority:RUT,33,Filipstad- Ellingsrudåsen T,,704,,e60000,ffffff
+216,RUT:Line:3335,RUT:Authority:RUT,3335,Hellerudhaugen - Åneby - Kongskog,,712,,76a300,ffffff
+217,RUT:Line:3250,RUT:Authority:RUT,250N,Oslo bussterminal - Sandvika- Slemmestad- Sætre,,705,,76a300,ffffff
+218,RUT:Line:3534,RUT:Authority:RUT,3534,Bogstad - Borgen - Nybakk,,712,,76a300,ffffff
+219,RUT:Line:3533,RUT:Authority:RUT,3533,Lundsletta -Borgen - Vesong usk.,,712,,76a300,ffffff
+220,RUT:Line:3532,RUT:Authority:RUT,3532,Dagsjøveien - Hauerseter - Nordkisa,,712,,76a300,ffffff
+221,RUT:Line:3531,RUT:Authority:RUT,3531,Ekornrud - Algarheim,,712,,76a300,ffffff
+222,RUT:Line:350,RUT:Authority:RUT,350,Lillestrøm - Enebakk,,704,,76a300,ffffff
+223,RUT:Line:3500,RUT:Authority:RUT,500N,Drøbak - Oslo natt og morgen,,705,,76a300,ffffff
+224,RUT:Line:34,RUT:Authority:RUT,34,Tåsen - Ekeberg hageby,,704,,e60000,ffffff
+225,RUT:Line:345,RUT:Authority:RUT,345,Vestvollen - Økern,,704,,76a300,ffffff
+226,RUT:Line:360,RUT:Authority:RUT,360,Vardefjellet/Vardeåsen - Blystadlia,,704,,76a300,ffffff
+227,RUT:Line:35,RUT:Authority:RUT,35,Christiania torv - Vippetangen,,704,,e60000,ffffff
+228,RUT:Line:3575,RUT:Authority:RUT,3575,Nannestad - Krokfoss - Jessheim,,712,,76a300,ffffff
+229,RUT:Line:3574,RUT:Authority:RUT,3574,Stokker-Borgen -Nybakk-Jessheim,,712,,76a300,ffffff
+230,RUT:Line:3571,RUT:Authority:RUT,3571,Veståsen - Ask - Kløfta - Jessheim,,712,,76a300,ffffff
+231,RUT:Line:3542,RUT:Authority:RUT,3542,Algarheim - Gystadmarka,,712,,76a300,ffffff
+232,RUT:Line:3538,RUT:Authority:RUT,3538,Nordkisa -  Jessheim - Nannestad,,712,,76a300,ffffff
+233,RUT:Line:3535,RUT:Authority:RUT,3535,Østli - Mogreina,,712,,76a300,ffffff
+234,RUT:Line:3640,RUT:Authority:RUT,3640,Bjertnesfeltet - Skogbygda,,712,,76a300,ffffff
+235,RUT:Line:3639,RUT:Authority:RUT,3639,Herbergåsen - Skogbygda - Vormsund,,712,,76a300,ffffff
+236,RUT:Line:3638,RUT:Authority:RUT,3638,Fallet - Skogbygda - Vormsund - Neskollen,,712,,76a300,ffffff
+237,RUT:Line:3637,RUT:Authority:RUT,3637,Rød - Brårud - Fenstad,,712,,76a300,ffffff
+238,RUT:Line:3636,RUT:Authority:RUT,3636,Neskollen - Vormsund,,712,,76a300,ffffff
+239,RUT:Line:3635,RUT:Authority:RUT,3635,Vormsund - Brårud - Fenstad,,712,,76a300,ffffff
+240,RUT:Line:3634,RUT:Authority:RUT,3634,Brårud/Neskollen - Vormsund,,712,,76a300,ffffff
+241,RUT:Line:3633,RUT:Authority:RUT,3633,Frilset/Bårstad - Fenstad - Vormsund - Neskollen,,712,,76a300,ffffff
+242,RUT:Line:365,RUT:Authority:RUT,365,Sørumsand - Frogner - Skedsmokorset,,704,,76a300,ffffff
+243,RUT:Line:3659,RUT:Authority:RUT,3659,Østgård - Dragsjøvegen - Årnes,,712,,76a300,ffffff
+244,RUT:Line:3658,RUT:Authority:RUT,3658,Huserteiet - Aulitoppen - Framtun,,712,,76a300,ffffff
+245,RUT:Line:3657,RUT:Authority:RUT,3657,Årnes - Brauter - Framtun,,712,,76a300,ffffff
+246,RUT:Line:3652,RUT:Authority:RUT,3652,Opaker - Smedsrud - Østgård,,712,,76a300,ffffff
+247,RUT:Line:3644,RUT:Authority:RUT,3644,Fuglefjellet - Hvam - Neskollen,,712,,76a300,ffffff
+248,RUT:Line:3643,RUT:Authority:RUT,3643,Simarud - Tomteråsen - Neskollen,,712,,76a300,ffffff
+249,RUT:Line:3641,RUT:Authority:RUT,3641,Vormsund - Uvesund - Opaker - Skogbygda,,712,,76a300,ffffff
+250,RUT:Line:3686,RUT:Authority:RUT,3686,Runni - Tomteråsen/ Neskollen - Rånåsfoss,,712,,76a300,ffffff
+251,RUT:Line:3684,RUT:Authority:RUT,3684,Hvam vgs. - Hellne - Aurskog - Bjørkelangen,,712,,76a300,ffffff
+252,RUT:Line:3682,RUT:Authority:RUT,3682,Skedsmokorset - Frogner - Kløfta - Hvam vgs,,712,,76a300,ffffff
+253,RUT:Line:367,RUT:Authority:RUT,367,Sørum sør/øst,,704,,76a300,ffffff
+254,RUT:Line:3677,RUT:Authority:RUT,3677,Lørenfallet - Sørumsand - Hellne - Nes vgs.,,712,,76a300,ffffff
+255,RUT:Line:3676,RUT:Authority:RUT,3676,Bjørkelangen - Aurskog - Hellne - Haga - Nes vgs.,,712,,76a300,ffffff
+256,RUT:Line:3674,RUT:Authority:RUT,3674,Fallet - Skogbygda - Vormsund - Årnes,,712,,76a300,ffffff
+257,RUT:Line:366,RUT:Authority:RUT,366,Orredalen - Sørumsand,,704,,76a300,ffffff
+258,RUT:Line:3781,RUT:Authority:RUT,3781,Langset - Eidsvoll via Hammestad,,712,,76a300,ffffff
+259,RUT:Line:3731,RUT:Authority:RUT,3731,Millidal - Skovseth - Eidsvoll/ Vilberg,,712,,76a300,ffffff
+260,RUT:Line:370,RUT:Authority:RUT,370A,Sørumsand - Blaker - Sørumsand,,704,,76a300,ffffff
+261,RUT:Line:3704,RUT:Authority:RUT,B4,Langøyene,,1008,,682c88,ffffff
+262,RUT:Line:3703,RUT:Authority:RUT,B3,Lindøya øst,,1008,,682c88,ffffff
+263,RUT:Line:3702,RUT:Authority:RUT,B2,Nakkholmen,,1008,,682c88,ffffff
+264,RUT:Line:3701,RUT:Authority:RUT,B1,Øyene,,1008,,682c88,ffffff
+265,RUT:Line:368,RUT:Authority:RUT,368,Bestillingslinje Sørum nord/øst,,704,,76a300,ffffff
+266,RUT:Line:3778,RUT:Authority:RUT,3778,Feiring - Eidsvoll,,712,,76a300,ffffff
+267,RUT:Line:3735,RUT:Authority:RUT,3735,Vilberg/ Eidsvoll - Finstad/  Bårstad,,712,,76a300,ffffff
+268,RUT:Line:385,RUT:Authority:RUT,385,Rotnes - Olavsgaard - Ahus,,704,,76a300,ffffff
+269,RUT:Line:3834,RUT:Authority:RUT,3834,Kringlerdalen - Maura - Nannestad,,712,,76a300,ffffff
+270,RUT:Line:3773,RUT:Authority:RUT,3773,Gjerdrum- Åsgreina - Maura - Eidsvoll,,712,,76a300,ffffff
+271,RUT:Line:3734,RUT:Authority:RUT,3734,Skovseth - Hammerstad/ Bønsdalen - Eidsvoll,,712,,76a300,ffffff
+272,RUT:Line:3903,RUT:Authority:RUT,3N,Jernbanetorget - Skullerud T,,705,,e60000,ffffff
+273,RUT:Line:3810,RUT:Authority:RUT,B10,Nesoddtangen - Aker brygge,,1008,,682c88,ffffff
+274,RUT:Line:3872,RUT:Authority:RUT,3872,Eidsvoll - Råholt - Dal - Nannestad,,712,,76a300,ffffff
+275,RUT:Line:381,RUT:Authority:RUT,381,Gullhaug-Tømte - Lillestrøm,,704,,76a300,ffffff
+276,RUT:Line:3783,RUT:Authority:RUT,3783,Langset - Eidsvoll via Østsidavegen,,712,,76a300,ffffff
+277,RUT:Line:3772,RUT:Authority:RUT,3772,Jessheim - Eidsvoll/ Eidsvoll - Dal - Østli,,712,,76a300,ffffff
+278,RUT:Line:3737,RUT:Authority:RUT,3737,Nygård/Vestheim - Sandvoll - Langset,,712,,76a300,ffffff
+279,RUT:Line:3871,RUT:Authority:RUT,3871,Kongskog - Olavsgaard - Jessheim vgs,,712,,76a300,ffffff
+280,RUT:Line:3839,RUT:Authority:RUT,3839,Nannestad - Maura - Sandnessenter,,712,,76a300,ffffff
+281,RUT:Line:3833,RUT:Authority:RUT,3833,Ask - Veståsen - Eltonåsen - Nannestad,,712,,76a300,ffffff
+282,RUT:Line:3874,RUT:Authority:RUT,3874,Olavsgaard - Skedsmo - Jessheim - Nannestad,,712,,76a300,ffffff
+283,RUT:Line:3837,RUT:Authority:RUT,3837,Eltonåsen - Løkendalen - Fagerli sykehjem,,712,,76a300,ffffff
+284,RUT:Line:3820,RUT:Authority:RUT,B20,Slemmestad - Aker brygge,,1008,,682c88,ffffff
+285,RUT:Line:3742,RUT:Authority:RUT,3742,Eidsvoll - Ås skole - Finstad,,712,,76a300,ffffff
+286,RUT:Line:37,RUT:Authority:RUT,37,Nydalen T - Helsfyr,,704,,e60000,ffffff
+287,RUT:Line:3771,RUT:Authority:RUT,3771,Olavsgaard- Kløfta- Dal -Råholt - Eidsvoll,,712,,76a300,ffffff
+288,RUT:Line:3740,RUT:Authority:RUT,3740,Venger - Råholt,,712,,76a300,ffffff
+289,RUT:Line:3905,RUT:Authority:RUT,5N,Jernbanetorget - Vestli T,,705,,e60000,ffffff
+290,RUT:Line:3780,RUT:Authority:RUT,3780,Eidsvoll - Bårlidalen - Rød,,712,,76a300,ffffff
+291,RUT:Line:390,RUT:Authority:RUT,390,Kongskog/Hellerudhaugen - Oslo bussterminal,,704,,76a300,ffffff
+292,RUT:Line:380,RUT:Authority:RUT,380,Lillestrøm - Trondheimsveien - Oslo bussterminal,,704,,76a300,ffffff
+293,RUT:Line:375,RUT:Authority:RUT,375,Strømmen - Olavsgaard - Oslo bussterminal,,704,,76a300,ffffff
+294,RUT:Line:3904,RUT:Authority:RUT,4N,Jernbanetorget - Bergkrystallen T,,705,,e60000,ffffff
+295,RUT:Line:3811,RUT:Authority:RUT,B11,Lysaker - Nesoddtangen,,1008,,682c88,ffffff
+296,RUT:Line:3743,RUT:Authority:RUT,3743,Eidsvoll - Finstad - Dal  - Råholt,,712,,76a300,ffffff
+297,RUT:Line:3902,RUT:Authority:RUT,2N,Østerås T - Ellingsrudåsen,,705,,e60000,ffffff
+298,RUT:Line:3932,RUT:Authority:RUT,32N,Voksen skog - Kværnerbyen,,705,,e60000,ffffff
+299,RUT:Line:3930,RUT:Authority:RUT,30N,Jernbanetorget - Bygdøy,,705,,e60000,ffffff
+300,RUT:Line:3918,RUT:Authority:RUT,18N,Kringsjå - Åsbråten,,705,,e60000,ffffff
+301,RUT:Line:3912,RUT:Authority:RUT,12N,Majorstuen - Kjelsås,,705,,e60000,ffffff
+302,RUT:Line:3911,RUT:Authority:RUT,11N,Majorstuen - Kjelsås,,705,,e60000,ffffff
+303,RUT:Line:3901,RUT:Authority:RUT,1N,Jernbanetorget - Ullerntoppen,,705,,e60000,ffffff
+304,RUT:Line:3838,RUT:Authority:RUT,3838,Nannestad - Engelstad - Grasmo,,712,,76a300,ffffff
+305,RUT:Line:3821,RUT:Authority:RUT,B21,Son - Aker brygge,,1008,,682c88,ffffff
+306,RUT:Line:3,RUT:Authority:RUT,3,Kolsås - Mortensrud,,401,,ec700c,ffffff
+307,RUT:Line:3983,RUT:Authority:RUT,83N,Nationaltheatret - Fløysbonn,,705,,e60000,ffffff
+308,RUT:Line:3981,RUT:Authority:RUT,81N,Nationaltheatret - Ski,,705,,e60000,ffffff
+309,RUT:Line:397,RUT:Authority:RUT,397,Nittedal stasjon - Kruttverket - Dam,,704,,76a300,ffffff
+310,RUT:Line:3970,RUT:Authority:RUT,70N,Jernbanetorget - Bjørndal,,705,,e60000,ffffff
+311,RUT:Line:396,RUT:Authority:RUT,396,Slattum - Holum skog - Skillebekk,,704,,76a300,ffffff
+312,RUT:Line:3963,RUT:Authority:RUT,63N,Romsås ring,,705,,e60000,ffffff
+313,RUT:Line:395,RUT:Authority:RUT,395,Nittedal stasjon - Dam - Holum skog - Skillebekk,,704,,76a300,ffffff
+314,RUT:Line:425,RUT:Authority:RUT,425,Kløfta – Oslo lufthavn,,704,,76a300,ffffff
+315,RUT:Line:420,RUT:Authority:RUT,420,Maura -  Jessheim,,704,,76a300,ffffff
+316,RUT:Line:41,RUT:Authority:RUT,41,Sørkedalen  - Røa T,,704,,e60000,ffffff
+317,RUT:Line:413,RUT:Authority:RUT,413,Bestilling Nannestad,,704,,76a300,ffffff
+318,RUT:Line:410,RUT:Authority:RUT,410,Nannestad -  Ask/ Veståsen,,704,,76a300,ffffff
+319,RUT:Line:40,RUT:Authority:RUT,40,Øvre Sogn - Skøyen (- Fornebu),,704,,e60000,ffffff
+320,RUT:Line:405,RUT:Authority:RUT,405,Kløfta - Ask terminal,,704,,76a300,ffffff
+321,RUT:Line:400,RUT:Authority:RUT,400,Oslo lufthavn - Veståsen - Olavsgaard - Oslo,,704,,76a300,ffffff
+322,RUT:Line:439,RUT:Authority:RUT,439,Bestillingslinje Ullensaker,,704,,76a300,ffffff
+323,RUT:Line:438,RUT:Authority:RUT,438,Bestillingslinje Ullensaker,,704,,76a300,ffffff
+324,RUT:Line:437,RUT:Authority:RUT,437,Bestillingslinje Ullensaker,,704,,76a300,ffffff
+325,RUT:Line:436,RUT:Authority:RUT,436,Bestillings linje Ullensaker,,704,,76a300,ffffff
+326,RUT:Line:434,RUT:Authority:RUT,434,Bestilling Ulvin - Minnesund,,704,,76a300,ffffff
+327,RUT:Line:433,RUT:Authority:RUT,433,Servicelinje Eidsvoll - Bønsdalen,,704,,76a300,ffffff
+328,RUT:Line:432,RUT:Authority:RUT,432,Servicelinje Finstad - Eidsvoll,,704,,76a300,ffffff
+329,RUT:Line:430,RUT:Authority:RUT,430,Eidsvoll - Jessheim,,704,,76a300,ffffff
+330,RUT:Line:449,RUT:Authority:RUT,449,Bestilling Feiring - Minnesund - Eidsvoll,,704,,76a300,ffffff
+331,RUT:Line:447,RUT:Authority:RUT,447,Bestilling Hurdal,,704,,76a300,ffffff
+332,RUT:Line:446,RUT:Authority:RUT,446,Hurdal - Jessheim/ Nannestad,,704,,76a300,ffffff
+333,RUT:Line:445,RUT:Authority:RUT,445,Hurdal - Eidsvoll verk,,704,,76a300,ffffff
+334,RUT:Line:444,RUT:Authority:RUT,444,Bestilling Gullverket - Frislet Eidsvoll,,704,,76a300,ffffff
+335,RUT:Line:442,RUT:Authority:RUT,442,Gullverket - Eidsvoll,,704,,76a300,ffffff
+336,RUT:Line:441,RUT:Authority:RUT,441,Eidsvoll - Årnes,,704,,76a300,ffffff
+337,RUT:Line:440,RUT:Authority:RUT,440,Fenstad/Nordkisa - Oslo lufthavn,,704,,76a300,ffffff
+338,RUT:Line:461,RUT:Authority:RUT,461,Bestilling Fenstad øst/ vest (462),,704,,76a300,ffffff
+339,RUT:Line:460,RUT:Authority:RUT,460,Herbergåsen - Kløfta,,704,,76a300,ffffff
+340,RUT:Line:45,RUT:Authority:RUT,45,Majorstuen - Voksen skog,,704,,e60000,ffffff
+341,RUT:Line:455,RUT:Authority:RUT,455,Årnes -Rånåsfoss,,704,,76a300,ffffff
+342,RUT:Line:453,RUT:Authority:RUT,453,Rånåsfoss - Årnes,,704,,76a300,ffffff
+343,RUT:Line:452,RUT:Authority:RUT,452,Auli - Årnes - Østgård - Årnes,,704,,76a300,ffffff
+344,RUT:Line:451,RUT:Authority:RUT,451,Dysterud - Årnes,,704,,76a300,ffffff
+345,RUT:Line:450,RUT:Authority:RUT,450,Årnes - Oslo lufthavn,,704,,76a300,ffffff
+346,RUT:Line:510,RUT:Authority:RUT,510,Bøleråsen - Ski - Ås - Drøbak,,704,,76a300,ffffff
+347,RUT:Line:471,RUT:Authority:RUT,471,Skotterud/Rømskog - Sørumsand,,704,,76a300,ffffff
+348,RUT:Line:470,RUT:Authority:RUT,470,(Rømskog) - Bjørkelangen - Lillestrøm,,704,,76a300,ffffff
+349,RUT:Line:535,RUT:Authority:RUT,535,Garder - Kroer - Ås stasjon,,704,,76a300,ffffff
+350,RUT:Line:520,RUT:Authority:RUT,520,Vinterbro - Ski - Enebakk,,704,,76a300,ffffff
+351,RUT:Line:46,RUT:Authority:RUT,46,Majorstuen - Ullerntoppen,,704,,e60000,ffffff
+352,RUT:Line:465,RUT:Authority:RUT,465,Bestilling Skogbygda-Greni/Opaker-Seterstøa (466),,704,,76a300,ffffff
+353,RUT:Line:463,RUT:Authority:RUT,463,Bestilling Udnes & Haga (464),,704,,76a300,ffffff
+354,RUT:Line:51,RUT:Authority:RUT,51,Maridalen - Nydalen,,704,,e60000,ffffff
+355,RUT:Line:478,RUT:Authority:RUT,478,Aurskog/Høland øst,,704,,76a300,ffffff
+356,RUT:Line:536,RUT:Authority:RUT,536,Dyster/Eldor - Ås stasjon,,704,,76a300,ffffff
+357,RUT:Line:533,RUT:Authority:RUT,533,Randem - Vestby stasjon,,704,,76a300,ffffff
+358,RUT:Line:477,RUT:Authority:RUT,477,Aurskog/Høland nord,,704,,76a300,ffffff
+359,RUT:Line:526,RUT:Authority:RUT,526,Ellingsrudlia - Ski stasjon,,704,,76a300,ffffff
+360,RUT:Line:521,RUT:Authority:RUT,521,TusenFryd - Ski stasjon,,704,,76a300,ffffff
+361,RUT:Line:517,RUT:Authority:RUT,517,Siggerud - Ski stasjon,,704,,76a300,ffffff
+362,RUT:Line:480,RUT:Authority:RUT,480,Bjørkelangen - Løken - Lillestrøm,,704,,76a300,ffffff
+363,RUT:Line:532,RUT:Authority:RUT,532,Garder - Vestby stasjon,,704,,76a300,ffffff
+364,RUT:Line:525,RUT:Authority:RUT,525,Kråkstad - Ski stasjon,,704,,76a300,ffffff
+365,RUT:Line:515,RUT:Authority:RUT,515,Ryen - Siggerud - Ski,,704,,76a300,ffffff
+366,RUT:Line:506,RUT:Authority:RUT,506,Klommestein - Drøbak - Frogn vgs,,704,,76a300,ffffff
+367,RUT:Line:490,RUT:Authority:RUT,490,Trøgstad - Lillestrøm,,704,,76a300,ffffff
+368,RUT:Line:479,RUT:Authority:RUT,479,Aurskog/Høland sør,,704,,76a300,ffffff
+369,RUT:Line:524,RUT:Authority:RUT,524,Ås - Vinterbro - Ski stasjon,,704,,76a300,ffffff
+370,RUT:Line:527,RUT:Authority:RUT,527,Skotbu - Ski stasjon,,704,,76a300,ffffff
+371,RUT:Line:500,RUT:Authority:RUT,500,Drøbak - Oslo,,704,,76a300,ffffff
+372,RUT:Line:485,RUT:Authority:RUT,485,Hemnes - Løken - Bjørkelangen,,704,,76a300,ffffff
+373,RUT:Line:5260,RUT:Authority:RUT,260E,Bødalen - Slemmestad - Holmen - Sandvika- Ullevål,,702,,76a300,ffffff
+374,RUT:Line:523,RUT:Authority:RUT,523,Kjærnes - Vinterbro - Ski stasjon,,704,,76a300,ffffff
+375,RUT:Line:516,RUT:Authority:RUT,516,Siggerud - Vevelstad stasjon,,704,,76a300,ffffff
+376,RUT:Line:507,RUT:Authority:RUT,507,Elle - Dyrløkke,,704,,76a300,ffffff
+377,RUT:Line:4,RUT:Authority:RUT,4,Vestli - Bergkrystallen,,401,,ec700c,ffffff
+378,RUT:Line:545,RUT:Authority:RUT,545,Son - Vestby stasjon,,704,,76a300,ffffff
+379,RUT:Line:5405,RUT:Authority:RUT,540E,Store Brevik - Sonsveien stasjon,,704,,76a300,ffffff
+380,RUT:Line:530,RUT:Authority:RUT,530,Pepperstad - Randem - Vestby stasjon,,704,,76a300,ffffff
+381,RUT:Line:511,RUT:Authority:RUT,511,Sætreskogen - Ski stasjon,,704,,76a300,ffffff
+382,RUT:Line:505,RUT:Authority:RUT,505,Drøbak - Oslo,,704,,76a300,ffffff
+383,RUT:Line:48,RUT:Authority:RUT,48,Voksenkollen - Tryvann,,704,,e60000,ffffff
+384,RUT:Line:540,RUT:Authority:RUT,540,Moss - Son - Vestby stasjon,,704,,76a300,ffffff
+385,RUT:Line:531,RUT:Authority:RUT,531,Hvitsten - Vestby stasjon,,704,,76a300,ffffff
+386,RUT:Line:570,RUT:Authority:RUT,570,Vinterbro - Nesoddtangen,,704,,76a300,ffffff
+387,RUT:Line:56,RUT:Authority:RUT,56,Nydalen - Solemskogen,,704,,e60000,ffffff
+388,RUT:Line:565,RUT:Authority:RUT,565,Myklerud - Nesoddtangen,,704,,76a300,ffffff
+389,RUT:Line:561,RUT:Authority:RUT,561,Drøbak - Nesoddtangen,,704,,76a300,ffffff
+390,RUT:Line:560,RUT:Authority:RUT,560,Blylaget - Nesoddtangen,,704,,76a300,ffffff
+391,RUT:Line:551,RUT:Authority:RUT,551,Dalefjerdingen - Enebakk kirke,,704,,76a300,ffffff
+392,RUT:Line:550,RUT:Authority:RUT,550,Enebakk - Oslo,,704,,76a300,ffffff
+393,RUT:Line:54,RUT:Authority:RUT,54,Tjuvholmen - Kjelsås stasjon,,704,,e60000,ffffff
+394,RUT:Line:63,RUT:Authority:RUT,63,Grorud T - Romsås ring,,704,,e60000,ffffff
+395,RUT:Line:62,RUT:Authority:RUT,62,Grorud T - Ammerud ring,,704,,e60000,ffffff
+396,RUT:Line:61,RUT:Authority:RUT,61A,Tveita T - Solfjellet,,704,,e60000,ffffff
+397,RUT:Line:60,RUT:Authority:RUT,60,Vippetangen - Tonsenhagen,,704,,e60000,ffffff
+398,RUT:Line:5,RUT:Authority:RUT,5,Sognsvann - Vestli,,401,,ec700c,ffffff
+399,RUT:Line:58,RUT:Authority:RUT,58,Nydalen - Tveita T via Bjerke,,704,,e60000,ffffff
+400,RUT:Line:576,RUT:Authority:RUT,576,Fagerstrand - Vinterbro,,704,,76a300,ffffff
+401,RUT:Line:575,RUT:Authority:RUT,575,Drøbak - Fagerstrand - Nesoddtangen,,704,,76a300,ffffff
+402,RUT:Line:71,RUT:Authority:RUT,71A,Jernbanetorget - Bjørndal,,704,,e60000,ffffff
+403,RUT:Line:70,RUT:Authority:RUT,70,Nationaltheatret - Skullerud T,,704,,e60000,ffffff
+404,RUT:Line:69,RUT:Authority:RUT,69,Tveita T - Lutvann,,704,,e60000,ffffff
+405,RUT:Line:68,RUT:Authority:RUT,68,Helsfyr T - Grorud T via Alfaset,,704,,e60000,ffffff
+406,RUT:Line:67,RUT:Authority:RUT,67,Økern T - Lørenskog sentrum,,704,,e60000,ffffff
+407,RUT:Line:66,RUT:Authority:RUT,66,Helsfyr T - Grorud T,,704,,e60000,ffffff
+408,RUT:Line:65,RUT:Authority:RUT,65,Furuset T - Stovner T via Smedstua,,704,,e60000,ffffff
+409,RUT:Line:64,RUT:Authority:RUT,64A,Furuset T - Stovner T via Høybråten,,704,,e60000,ffffff
+410,RUT:Line:80,RUT:Authority:RUT,80E,Jernbanetorget - Åsbråten,,702,,e60000,ffffff
+411,RUT:Line:79,RUT:Authority:RUT,79,Grorud T - Åsbråten,,704,,e60000,ffffff
+412,RUT:Line:78,RUT:Authority:RUT,78A,Østensjø ring,,704,,e60000,ffffff
+413,RUT:Line:77,RUT:Authority:RUT,77,Holmlia stasjon - Bjørndal,,704,,e60000,ffffff
+414,RUT:Line:76,RUT:Authority:RUT,76,Helsfyr T - Mortensrud T,,704,,e60000,ffffff
+415,RUT:Line:75,RUT:Authority:RUT,75A,Nordstrand ring,,704,,e60000,ffffff
+416,RUT:Line:74,RUT:Authority:RUT,74,Vika - Mortensrud T,,704,,e60000,ffffff
+417,RUT:Line:73,RUT:Authority:RUT,73,Holmlia stasjon - Brenna,,704,,e60000,ffffff
+418,RUT:Line:91,RUT:Authority:RUT,91,Jernbanetorget - Storo,,704,,e60000,ffffff
+419,RUT:Line:87,RUT:Authority:RUT,87,Hauketo stasjon - Fugleåsen,,704,,e60000,ffffff
+420,RUT:Line:86,RUT:Authority:RUT,86,Kolbotn - Svartskog,,704,,e60000,ffffff
+421,RUT:Line:85,RUT:Authority:RUT,85,Jernbanetorget - Ulvøya,,704,,e60000,ffffff
+422,RUT:Line:84,RUT:Authority:RUT,84E,Jernbanetorget - Myrvoll stasjon,,702,,e60000,ffffff
+423,RUT:Line:83,RUT:Authority:RUT,83,Jernbanetorget - Tårnåsen,,704,,e60000,ffffff
+424,RUT:Line:82,RUT:Authority:RUT,82E,Jernbanetorget - Tårnåsen,,702,,e60000,ffffff
+425,RUT:Line:81,RUT:Authority:RUT,81,Fornebu - Fløysbonn,,704,,e60000,ffffff
