@@ -4,6 +4,12 @@ from zipfile import ZipFile
 import pandas as pd
 
 def get_en_tur_data():
+    '''
+
+
+    Returns: Dataframe with route_id and stop_id columns
+
+    '''
     url = 'https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_rut-aggregated-gtfs.zip'
 
     myfile = requests.get(url)
