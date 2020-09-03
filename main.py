@@ -4,9 +4,11 @@ import pandas as pd
 import requests
 import re
 import os
+from datetime import date, timedelta
 
 # Insert your own client ID here
 CLIENT_ID = os.environ['FROST_API_CLIENT_ID']
+
 
 def get_weather_station_latlon():
     """Goes into FrostAPI and gets all the stations unique SN 
@@ -46,18 +48,19 @@ def get_weather_station_latlon():
 
     return df[['id', 'name', 'lat', 'lon']]
 
-def get_weather_on_station(sourceId):
+def get_weather_on_station(sourceId, start_date):
     """Get the weather on a particular station
     Args:
         sourceId (str): sourceId for a weather station in FrostAPI
     Returns:
         Pandas Dataframe: columns = sourceID, referenceTime, elementId, value, unit
     """    
+    today = str(date.today())
     endpoint = 'https://frost.met.no/observations/v0.jsonld'
     parameters = {
         'sources': f'{sourceId},', 
         'elements': 'air_temperature,',
-        'referencetime': '2020-08-25/2020-09-01',
+        'referencetime': f'{start_date}/{today}',
     }
     # Issue an HTTP GET request
     r = requests.get(endpoint, parameters, auth=(CLIENT_ID,''))
@@ -82,13 +85,16 @@ def get_weather_on_station(sourceId):
     df = df.reset_index()
 
     datef = lambda x: x[:10].replace('-','')
+    timef = lambda x: x[11:13]
     sfunc = lambda x: x[:-2]
 
     df['date'] = df['referenceTime'].apply(datef)
+    df['time'] = df['referenceTime'].apply(timef)
     df['sourceId'] = df['sourceId'].apply(sfunc)
     df = df[df['qualityCode']==0.0]
+    df = df.drop_duplicates(subset=['sourceId', 'time', 'date'])
 
-    return df[['sourceId', 'referenceTime', 'date', 'value', 'unit']]
+    return df[['sourceId', 'time', 'date', 'value', 'unit']]
 
 def get_busstop_route(): 
     '''
@@ -120,6 +126,7 @@ def get_busstop_route():
     stop_times = stop_times[['trip_id', 'stop_id']]
 
     df_ = pd.merge(stop_times, trips, on='trip_id', how='inner')
+    df_ = pd.merge(df_, stops, on='stop_id', how='inner')
     df_ = df_.drop_duplicates()
 
     stop_route = pd.DataFrame()
@@ -128,8 +135,11 @@ def get_busstop_route():
 
     stop_route['route_id'] = df_['route_id'].apply(get_id)
     stop_route['stop_id'] = df_['stop_id'].apply(get_id)
+    stop_route['stop_id'] = stop_route['stop_id'].apply(str)
+    stop_route['bkey'] = stop_route['stop_id'] + df_['stop_name']
+    
     stop_route = stop_route.drop_duplicates()
-    stop_route = stop_route.reset_index()
+    stop_route.reset_index(inplace=True)
     return stop_route
 
 def get_routes(): 
@@ -144,7 +154,6 @@ def get_routes():
     current_folder = os.getcwd()
 
     open(current_folder+'/routes.zip', 'wb').write(myfile.content)
-    stops = pd.DataFrame()
     routes = pd.DataFrame()
 
     with ZipFile('routes.zip') as myzip:
@@ -183,27 +192,27 @@ def get_busstop_latlon():
     stops['stop_id'] = stops['stop_id'].apply(get_id)
     return stops
 
-def insert_weather_on_stations():
-    stations = get_weather_station_latlon()
-    stations = stations['id']
-    conn, cur = db.connect()
-    data = pd.DataFrame()
-    for sn in stations:
-        print(sn)
-        data = get_weather_on_station(sn)
-        query = '''insert into frostentur.weatherStationTemperatures(sourceId, referenceTime, date,  value, unit) 
-                        values (%s, %s, %s, %s, %s)'''
-        arg_list = []
-        if(data is None): continue
-        for _, arg in data.iterrows():
-            print(arg)
-            arg_list.append((str(arg['sourceId']), str(arg['referenceTime']), str(arg['date']), str(arg['value']), str(arg['unit'])))
+# def insert_weather_on_stations():
+#     stations = get_weather_station_latlon()
+#     stations = stations['id']
+#     conn, cur = db.connect()
+#     data = pd.DataFrame()
+#     for sn in stations:
+#         print(sn)
+#         data = get_weather_on_station(sn)
+#         query = '''insert into frostentur.weatherStationTemperatures(sourceId, referenceTime, date,  value, unit) 
+#                         values (%s, %s, %s, %s, %s)'''
+#         arg_list = []
+#         if(data is None): continue
+#         for _, arg in data.iterrows():
+#             print(arg)
+#             arg_list.append((str(arg['sourceId']), str(arg['referenceTime']), str(arg['date']), str(arg['value']), str(arg['unit'])))
 
-        cur.executemany(query, arg_list)
+#         cur.executemany(query, arg_list)
         
-        conn.commit()
-    db.close(conn, cur)
-    return 1
+#         conn.commit()
+#     db.close(conn, cur)
+#     return 1
 
 def insert_weather_station_latlon():
     stations = get_weather_station_latlon()
@@ -226,16 +235,16 @@ def insert_busstop_route():
     arg_list = []
     print(len(stations))
     for index, arg in stations.iterrows():
-        arg_list.append((str(arg['route_id']), str(arg['stop_id'])))
+        arg_list.append((str(arg['route_id']), str(arg['bkey'])))
         if(index%100 == 0):
-            query = '''insert into frostentur.busstoproute(route_id, stop_id) 
+            query = '''insert into datamart_star.route_busstop(route_id, bkey) 
                         values (%s, %s)'''
             cur.executemany(query, arg_list)
             print(f'inserted: {index}')
             arg_list = []
             conn.commit()
 
-    query = '''insert into frostentur.busstoproute(route_id, stop_id) 
+    query = '''insert into datamart_star.route_busstop(route_id, bkey)  
                         values (%s, %s)'''
     
     cur.executemany(query, arg_list)
@@ -289,3 +298,72 @@ def insert_routes():
     conn.commit()
     db.close(conn, cur)
     return 1
+
+def update_daily():
+    conn, cur = db.connect()
+    yesterday = str(date.today()- timedelta(days=1))
+    valid_oslo_stations = ['SN18701','SN18315','SN18240','SN18210','SN18270','SN18500','SN18020','SN17980','SN18269','SN18815','SN76914','SN18690','SN18410','SN18700','SN18920','SN18420','SN18950','SN18980']
+    query = '''CREATE TABLE IF NOT EXISTS frostentur.DailyTemperatures (sourceId text, timek int, datek int, value float, unit text)'''
+    cur.execute(query)
+    query = '''TRUNCATE TABLE frostentur.DailyTemperatures;'''
+    cur.execute(query)
+    query = '''insert into frostentur.DailyTemperatures(sourceId, timek, datek, value, unit) 
+                         values (%s, %s, %s, %s, %s)'''
+
+    for station in valid_oslo_stations:
+        # ['sourceId', 'time', 'date', 'value', 'unit']
+        result = get_weather_on_station(station, yesterday)
+        if(result is None):
+            continue
+        row_list = []
+        for _, row in result.iterrows():
+            row_list.append((str(row['sourceId']), str(row['time']), str(row['date']), str(row['value']), str(row['unit'])))
+        
+        cur.executemany(query, row_list)
+        conn.commit()
+
+    query = '''insert into datamart_star.facttable_1 (buss_stop_id, sourceId, temperatur, kdate, ktime)
+                select bs.bkey, d.sourceid ,d.value ,d.datek, d.timek from frostentur.DailyTemperatures d 
+                join datamart_star.closest_buss_weather_station cbws using(sourceId)
+                join datamart_star.buss_stopp bs on bs.buss_stopp_name = cbws.stop_name ;'''
+    cur.execute(query)
+    db.close(conn, cur)
+
+def get_max_temperatur_per_route():
+    yesterday = str(date.today()- timedelta(days=1)).replace('-','')
+    query = f'''select mt.route_long_name, max(t.buss_stopp_name), max(t.temperatur)
+    from
+		(select r.route_long_name , max(f.temperatur) max_temperatur
+		from datamart_star.facttable_1 f 
+		join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+		join datamart_star.route_busstop rb using(bkey)
+		join datamart_star.route r using(route_id)
+        where f.kdate = {yesterday}
+		group by r.route_long_name order by max_temperatur desc) as mt
+	join
+		(select bs.buss_stopp_name, r.route_long_name, f.temperatur
+		from datamart_star.facttable_1 f 
+		join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+		join datamart_star.route_busstop rb using(bkey)
+		join datamart_star.route r using(route_id)
+		order by temperatur desc) as t
+	on t.route_long_name = mt.route_long_name
+	where mt.max_temperatur = t.temperatur
+	group by mt.route_long_name order by max(t.temperatur) desc;'''
+    conn, cur = db.connect()
+    cur.execute(query)
+
+    results = cur.fetchall()
+    for line in results:
+        print(line)
+
+    db.close(conn, cur)
+
+print('INSERTING YESTERDAYs RESULT')
+try:
+    update_daily()
+except:
+    pass
+print('GETTING BEST WEATHER FOR YESTERDAYS ROUTES')
+print('ROUTE NAME, BUSS STOP NAME, TEMPERATUR')
+get_max_temperatur_per_route()

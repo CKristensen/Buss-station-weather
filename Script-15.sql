@@ -1,54 +1,15 @@
-/**CREATE TABLE IF NOT EXISTS datamart_star.route (
-    route_id int primary key,
-    route_long_name text,
-    route_short_name text,
-    type text
-);
-
-CREATE TABLE IF NOT EXISTS datamart_star.buss_stopp (
-    bkey text primary key,
-    buss_stopp_id int,
-    buss_stopp_name text,
-    latitude float,
-    longitude float
-
-);
-
-CREATE TABLE IF NOT EXISTS datamart_star.route_busstop (
-    bkey text primary key references buss_stopp(bkey),
-    route_id int referencesroute(route_id)
-);
-
-CREATE TABLE IF NOT EXISTS datamart_star.weatherstation_s (
-    sourceid text primary key,
-    name text,
-    latitude float,
-    longitude float
-)
-
-CREATE TABLE IF NOT EXISTS datamart_star.facttable (
-    skey serial primary key,
-    buss_stop_id text references buss_stopp(bkey),
-    sourceid text references weatherstation_s(sourceId),
-    ktime int references times(ktime),
-    kdate int references date_s(k_date)
-)
-
-/**
-
-/** Getting stopnames and their coordinates filtering the stops only in central oslo**/
+/** Getting stopnames and their coordinates**/
 create view sbstop_coor as (select stop_name, min(b.lat) lat, min(b.lon) lon from frostentur.busstoplatlon b
 join public.oslostop o using(stop_name)
 group by stop_name);
-
 /**Getting valid weather stations and their coordinates**/
 create view weather_station_coor as (
 select w.sourceid, w.lat, w.lon from frostentur.weatherstationlatlon w 
-join (select distinct(substring(t.vÃ¦r_stasjon_id, 1, 7)) sourceid from public.temperatur t) h using(sourceid)
+join (select distinct(substring(t.vær_stasjon_id, 1, 7)) sourceid from public.temperatur t) h using(sourceid)
 group by w.sourceid);
 
 /**Only valid weather stations**/
-select distinct(substring(t.vÃ¦r_stasjon_id, 1, 7)) from public.temperatur t;
+select distinct(substring(t.vær_stasjon_id, 1, 7)) from public.temperatur t;
 
 /** Pythagoras to get the closest weather station to each buss station
  ***/
@@ -70,7 +31,17 @@ with min_distance as (
 	using(bid)
 	where md.mdistance = d.distance);
 
-CREATE TABLE "star"."times" (
+create table if not exists datamart_star.closest_buss_weather_station as
+select c.bid as stop_name, c.sid as sourceId
+from frostentur.closest_buss_weather_station c;
+
+
+ALTER TABLE datamart_star.closest_buss_weather_station ADD CONSTRAINT closest_buss_weather_station_fk FOREIGN KEY (sourceid) REFERENCES datamart_star.weatherstation_s(sourceid);
+ 
+
+
+
+CREATE TABLE "datamart_star"."times" (
     id int4 NOT NULL,
     time time,
     hour int2,
@@ -89,10 +60,10 @@ CREATE TABLE "star"."times" (
 WITH (OIDS=FALSE);
 
 
-TRUNCATE TABLE star.times;
+TRUNCATE TABLE datamart_star.times;
 
 -- Unknown member
-INSERT INTO star.times VALUES (
+INSERT INTO datamart_star.times VALUES (
     -1, --id
     '0:0:0', -- time
     0, -- hour
@@ -109,7 +80,7 @@ INSERT INTO star.times VALUES (
     'Unk' -- time_period_abbrev
 );
 
-INSERT INTO star.times
+INSERT INTO datamart_star.times
 SELECT
   to_char(datum, 'HH24MISS')::integer AS id,
   datum::time AS time,
@@ -125,7 +96,7 @@ SELECT
   to_char(datum, 'SSSS')::integer AS second_of_day,
 
   to_char(datum - (extract(minute FROM datum)::integer % 15 || 'minutes')::interval, 'hh24:mi') ||
-  ' â€“ ' ||
+  ' – ' ||
   to_char(datum - (extract(minute FROM datum)::integer % 15 || 'minutes')::interval + '14 minutes'::interval, 'hh24:mi')
     AS quarter_hour,
 
@@ -158,13 +129,14 @@ FROM generate_series('2000-01-01 00:00:00'::timestamp, '2000-01-01 23:59:59'::ti
 
 
 
+
 -- Dimension: Date
 -- PK: k_date (YYYYMMDD)
 -- Variable: all different time formats :-)
 
-DROP TABLE if exists star.date_s;
+DROP TABLE if exists datamart_star.date_s;
 
-CREATE TABLE star.date_s
+CREATE TABLE datamart_star.date_s
 (
   k_date              INT NOT NULL,
   date_actual              DATE NOT NULL,
@@ -197,14 +169,14 @@ CREATE TABLE star.date_s
   weekend_indr             BOOLEAN NOT NULL
 );
 
-ALTER TABLE star.date_s ADD CONSTRAINT date_s_k_date_pk PRIMARY KEY (k_date);
+ALTER TABLE datamart_star.date_s ADD CONSTRAINT date_s_k_date_pk PRIMARY KEY (k_date);
 
 CREATE INDEX date_s_date_actual_idx
-  ON star.date_s(date_actual);
+  ON datamart_star.date_s(date_actual);
 
 COMMIT;
 
-INSERT INTO star.date_s
+INSERT INTO datamart_star.date_s
 SELECT TO_CHAR(datum, 'yyyymmdd')::INT AS k_date,
        datum AS date_actual,
        EXTRACT(EPOCH FROM datum) AS epoch,
@@ -246,3 +218,116 @@ FROM (SELECT '2000-01-01'::DATE + SEQUENCE.DAY AS datum
       FROM GENERATE_SERIES(0, 29219) AS SEQUENCE (DAY)
       GROUP BY SEQUENCE.DAY) DQ
 ORDER BY 1;
+
+
+update datamart_star.times set ktime = ROUND(ktime/10000, 0) where ktime > 0;
+
+/*Since buss stop have no unique key I create a new*/
+create or replace function insert_bkey() returns trigger as $$
+begin
+    if NEW.bkey is null then
+       NEW.bkey := concat(cast(NEW.buss_stopp_id as text), new.buss_stopp_name);
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger insert_bkey
+before insert
+on datamart_star.buss_stopp
+for each row
+execute procedure insert_bkey();
+
+insert into datamart_star.buss_stopp (buss_stopp_id, buss_stopp_name, latitude, longitude) 
+select stop_id, stop_name, lat, lon
+from frostentur.busstoplatlon;
+
+/**DELETE DUPLICATES**/
+DELETE FROM frostentur.routes T1
+    USING   frostentur.routes T2
+WHERE   T1.ctid < T2.ctid  -- delete the older versions
+    AND T1.route_id  = T2.route_id;
+   
+   
+insert into datamart_star.route (route_id, route_short_name, route_long_name, type)
+select route_id, route_short_name, route_long_name, route_type
+from frostentur.routes r;
+
+
+insert into datamart_star.weatherstation_s (sourceid, latitude, longitude, "name") 
+select w.sourceid, w.lat, w.lon, w."name" from frostentur.weatherstationlatlon w;
+
+
+select * from datamart_star.weatherstation_s;
+
+
+select * from datamart_star.buss_stopp b
+where bkey='102060Bjørkelangen skole';
+
+insert into datamart_star.facttable (buss_stop_id, sourceid, temperatur, kdate, ktime)
+with weather_data as (
+		select temp_grader, replace(vær_stasjon_id, ':0', '') sid, 
+		LEFT(replace(temp_date_time, '-',''), 8) kdate,
+		cast(SUBSTRING(replace(temp_date_time, '-',''), 10, 2) as int) ktime from public.temperatur
+		), buss_data as
+		(
+		select bkey, sid
+		from frostentur.closest_buss_weather_station ws
+		join datamart_star.buss_stopp bs on bs.buss_stopp_name = ws.bid
+		)
+	select w.bkey, wd.sid, wd.temp_grader, cast(wd.kdate as int), cast(wd.ktime as int)
+	from weather_data wd
+	join buss_data w using(sid);
+
+
+select bkey, sid, bid 
+from frostentur.closest_buss_weather_station ws
+join datamart_star.buss_stopp bs on bs.buss_stopp_name = ws.bid;
+
+select s.buss_stop_id , s.kdate, s.ktime, count(*)
+from datamart_star.facttable s
+group by s.buss_stop_id, s.kdate, s.ktime
+order by count(*) desc;
+
+select distinct(t.vær_stasjon_id)
+from public.temperatur t;
+
+insert into datamart_star.facttable_1 (buss_stop_id, sourceId, temperatur, kdate, ktime)
+select bs.bkey, d.sourceid ,d.value ,d.datek, d.timek from frostentur.dailytemperatures d 
+join datamart_star.closest_buss_weather_station cbws using(sourceId)
+join datamart_star.buss_stopp bs on bs.buss_stopp_name = cbws.stop_name ;¨
+
+truncate table datamart_star.facttable_1;
+
+
+select r.route_long_name , max(f.temperatur) max_temperatur
+from datamart_star.facttable_1 f 
+join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+join datamart_star.route_busstop rb using(bkey)
+join datamart_star.route r using(route_id)
+group by r.route_long_name order by max_temperatur desc;
+
+select bs.buss_stopp_name , f.temperatur
+from datamart_star.facttable_1 f 
+join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+join datamart_star.route_busstop rb using(bkey)
+join datamart_star.route r using(route_id)
+order by temperatur desc;
+
+select mt.route_long_name, t.buss_stopp_name, t.temperatur
+from
+		(select r.route_long_name , max(f.temperatur) max_temperatur
+		from datamart_star.facttable_1 f 
+		join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+		join datamart_star.route_busstop rb using(bkey)
+		join datamart_star.route r using(route_id)
+		group by r.route_long_name order by max_temperatur desc) as mt
+	join
+		(select bs.buss_stopp_name, r.route_long_name, f.temperatur
+		from datamart_star.facttable_1 f 
+		join datamart_star.buss_stopp bs on f.buss_stop_id = bs.bkey
+		join datamart_star.route_busstop rb using(bkey)
+		join datamart_star.route r using(route_id)
+		order by temperatur desc) as t
+	on t.route_long_name = mt.route_long_name;
+

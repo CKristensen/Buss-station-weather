@@ -64,4 +64,43 @@ def create_table_weather_station():
 
 	close(conn, cur)
 
+# def create_data_mart():
+# 	CREATE TABLE IF NOT EXISTS datamart_star.route (
+#     route_id int primary key,
+#     route_long_name text,
+#     route_short_name text,
+#     type text
+# );
+
+# CREATE TABLE IF NOT EXISTS datamart_star.buss_stopp (
+#     bkey text primary key,
+#     buss_stopp_id int,
+#     buss_stopp_name text,
+#     latitude float,
+#     longitude float
+
+# );
+
+# CREATE TABLE IF NOT EXISTS datamart_star.route_busstop (
+#     bkey text primary key references buss_stopp(bkey),
+#     route_id int referencesroute(route_id)
+# );
+
+# CREATE TABLE IF NOT EXISTS datamart_star.weatherstation_s (
+#     sourceid text primary key,
+#     name text,
+#     latitude float,
+#     longitude float
+# )
+
+# CREATE TABLE IF NOT EXISTS datamart_star.facttable (
+#     skey serial primary key,
+#     buss_stop_id text references buss_stopp(bkey),
+#     sourceid text references weatherstation_s(sourceId),
+#     ktime int references times(ktime),
+#     kdate int references date_s(k_date)
+# )
+
+
+
 create_table_weather_station()
