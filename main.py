@@ -39,15 +39,15 @@ def get_weather_station_latlon():
         df.loc[len(df)] = [row['id'], row['name'], row["geometry"]]
 
     #extract the latitude and longitude from the geometry column
-    lat = lambda x: re.findall(r'(\d+\.\d+)', str(x))[0]
-    lon = lambda x: re.findall(r'(\d+\.\d+)', str(x))[1]
+    lat = lambda x: re.findall(r'(\d+\.\d+)', str(x))[1]
+    lon = lambda x: re.findall(r'(\d+\.\d+)', str(x))[0]
     df['lat'] = df['geometry'].apply(lat)
     df['lon']= df['geometry'].apply(lon)
 
     return df[['id', 'name', 'lat', 'lon']]
 
 def get_weather_on_station(sourceId):
-    """Get the weather on a particular station for the month of April
+    """Get the weather on a particular station
     Args:
         sourceId (str): sourceId for a weather station in FrostAPI
     Returns:
@@ -56,8 +56,8 @@ def get_weather_on_station(sourceId):
     endpoint = 'https://frost.met.no/observations/v0.jsonld'
     parameters = {
         'sources': f'{sourceId},', 
-        'elements': 'mean(air_temperature P1D),',
-        'referencetime': '2020-01-01/2020-09-01',
+        'elements': 'air_temperature,',
+        'referencetime': '2020-08-25/2020-09-01',
     }
     # Issue an HTTP GET request
     r = requests.get(endpoint, parameters, auth=(CLIENT_ID,''))
@@ -91,7 +91,6 @@ def get_weather_on_station(sourceId):
     return df[['sourceId', 'referenceTime', 'date', 'value', 'unit']]
 
 def get_busstop_route(): 
-
     '''
     Returns: Dataframe with route_id and stop_id columns
     '''
@@ -130,6 +129,7 @@ def get_busstop_route():
     stop_route['route_id'] = df_['route_id'].apply(get_id)
     stop_route['stop_id'] = df_['stop_id'].apply(get_id)
     stop_route = stop_route.drop_duplicates()
+    stop_route = stop_route.reset_index()
     return stop_route
 
 def get_routes(): 
@@ -158,7 +158,6 @@ def get_routes():
     routes['route_id'] = routes['route_id'].apply(get_id)
 
     return routes
-
 
 def get_busstop_latlon():
     '''
@@ -250,16 +249,43 @@ def insert_busstop_latlon():
     conn, cur = db.connect()
     arg_list = []
     for _, arg in stations.iterrows():
-        print('aaa')
         arg_list.append((str(arg['stop_id']), str(arg['stop_name']), str(arg['stop_lat']) ,str(arg['stop_lon'])))
 
     query = '''insert into frostentur.busstoplatlon(stop_id, stop_name, lat, lon) 
                         values (%s, %s, %s, %s)'''
-    print('inseritibng')
     cur.executemany(query, arg_list)
         
     conn.commit()
     db.close(conn, cur)
     return 1
 
-print(get_routes())
+def insert_routes():
+
+    query = '''CREATE TABLE IF NOT EXISTS frostentur.routes(route_id int,
+	route_short_name text,
+	route_long_name text,
+	route_type text);'''
+
+    stations = get_routes()
+    conn, cur = db.connect()
+    cur.execute(query)
+    arg_list = []
+    
+    for index, arg in stations.iterrows():
+        arg_list.append((str(arg['route_id']), str(arg['route_short_name']), str(arg['route_long_name']), str(arg['route_type'])))
+        if(index%100 == 0):
+            query = '''insert into frostentur.routes(route_id, route_short_name, route_long_name, route_type) 
+                        values (%s, %s, %s, %s)'''
+            cur.executemany(query, arg_list)
+            print(f'inserted: {index}')
+            arg_list = []
+            conn.commit()
+
+    query = '''insert into frostentur.routes(route_id, route_short_name, route_long_name, route_type) 
+                        values (%s, %s, %s, %s)'''
+    
+    cur.executemany(query, arg_list)
+        
+    conn.commit()
+    db.close(conn, cur)
+    return 1

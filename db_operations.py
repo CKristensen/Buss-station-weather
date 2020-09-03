@@ -5,7 +5,7 @@ import os
 
 PASS = os.environ['ACADEMY_DB_PASS']
 USER = os.environ['ACADEMY_USER_NAME']
-DBNAME = os.environ['ACADEMY_USER_NAME']
+DBNAME = 'team_ccm'
 HOST = os.environ['ACADEMY_DB']
 
 
@@ -63,6 +63,5 @@ def create_table_weather_station():
 
 
 	close(conn, cur)
-
 
 create_table_weather_station()

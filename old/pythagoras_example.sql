@@ -19,13 +19,13 @@ insert into public.test_pyth2 (lat, lon) values (2, 2);
 insert into public.test_pyth2 (lat, lon) values (2, 3);
 
 	with min_distance as (
-		select  buss_stop.row_id bid, MIN(SQRT(POWER(buss_stop.lat-t.lat, 2) + POWER(buss_stop.lon-t.lon, 2))) mdistance
+		select  buss_stop.row_id bid, MIN(POWER(buss_stop.lat-t.lat, 2) + POWER(buss_stop.lon-t.lon, 2)) mdistance
 		from public.test_pyth1 buss_stop
 		cross join public.test_pyth2 t
 		group by buss_stop.row_id
 	),
 	distances as (
-		select  buss_stop.row_id bid, t.row_id sid, SQRT(POWER(buss_stop.lat-t.lat, 2) + POWER(buss_stop.lon-t.lon, 2)) distance
+		select  buss_stop.row_id bid, t.row_id sid, POWER(buss_stop.lat-t.lat, 2) + POWER(buss_stop.lon-t.lon, 2) distance
 		from public.test_pyth1 buss_stop
 		cross join public.test_pyth2 t
 	) 
