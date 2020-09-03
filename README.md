@@ -20,4 +20,4 @@ Project still in progress.
 At this moment what it does:
   - Gets the weather for all buss stations in Oslo of yesterday.
   - Display in the command line the buss station with highest temperature per route.
-  - Uncomment the line create_db() in the main.py in order to create a new database.
+  - Uncomment the line create_db() in the main.py in order to create a new database. (still ot fully functional)
